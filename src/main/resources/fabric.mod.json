@@ -1,0 +1,45 @@
+{
+	"schemaVersion": 1,
+	"id": "ohnocreeper",
+	"version": "${version}",
+	"name": "OhNoCreeper",
+	"description": "Warning when there is a creeper nearby",
+	"authors": [
+		"dodo939"
+	],
+	"contact": {
+		"homepage": "https://dodo939.love/",
+		"sources": "https://github.com/yfy-dodo939/OhNoCreeper",
+		"issues": "https://github.com/yfy-dodo939/OhNoCreeper/issues"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/ohnocreeper/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"love.dodo939.OhNoCreeper"
+		],
+		"client": [
+			"love.dodo939.OhNoCreeperClient"
+		],
+		"fabric-datagen": [
+			"love.dodo939.OhNoCreeperDataGenerator"
+		]
+	},
+	"mixins": [
+		"ohnocreeper.mixins.json",
+		{
+			"config": "ohnocreeper.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
